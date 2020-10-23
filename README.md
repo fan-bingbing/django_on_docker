@@ -13,22 +13,28 @@ https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6
 https://github.com/CoreyMSchafer/code_snippets/tree/master/Django_Blog/12-Password-Reset
 
 This app supports mutiple user authentication, password reset.
-
-before building image, update your email and password in both .env.dev and .env.prod
+```bash
+git clone https://github.com/fan-bingbing/django_on_docker.git
+cd django_on_docker
+```
+Before building image, update your email and password in both .env.dev and .env.prod
 EMAIL_USER=***
 EMAIL_PASS=***
-this is used as email server sending reset email to user for user password reset. 
-in case of using gmail, Access for less secure apps need to be turned on.
+This is used as email server sending reset email to user for user password reset. 
+In case of using gmail, Access for less secure apps need to be turned on.
 
-once email setting is done, run following commands on local machine
+Once email setting is done, run following commands on local machine
 ```bash
-cd django_on_docker
 docker-compose -f docker-compose.prod.yml up -d --build
 docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
 docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
 ```
 
 In browser visit: localhost:1337
+
+
+
+
 
 ## command cheatsheet for development 
 ```bash
