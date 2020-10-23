@@ -1,9 +1,9 @@
 
-## introduction
+## Introduction
 A complete project configuring Django to run on docker with postgres.
 This projects includes development and production version of dockerfile and docker-compose file. for production environments, add on nginx serving static and media files, reverse-proxying gunicorn as production server.  
 
-## to try this project out
+## To try this project out
 My local docker version:
 Docker version 19.03.6, build 369ce74a3c
 
